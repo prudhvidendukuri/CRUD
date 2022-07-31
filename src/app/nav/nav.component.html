@@ -1,0 +1,11 @@
+<p>Features</p>
+<!-- search bar for searching through items -->
+<input type="search" />
+<!-- adding items -->
+<h3>Adding items</h3>
+<input type="text" #text>
+<button (click)="adding(text.value)">ADD</button>
+<!-- shoeing the list of items -->
+<ul>
+  <li *ngFor="let item of items" #list >{{ item }} <button (click)="removing(list.value)">X</button></li>
+</ul>
